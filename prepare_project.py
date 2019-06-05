@@ -7,7 +7,6 @@ from textwrap import dedent
 
 from django.utils.crypto import get_random_string
 
-
 DATABASES_DEVELOPMENT = dedent(
     """
     DATABASES = {
