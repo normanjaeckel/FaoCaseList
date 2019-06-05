@@ -11,11 +11,11 @@ from django.utils.crypto import get_random_string
 DATABASES_DEVELOPMENT = dedent(
     """
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(
                 os.path.dirname(os.path.abspath(__file__)),
-                'db.sqlite3'
+                "db.sqlite3"
             ),
         }
     }
@@ -25,13 +25,13 @@ DATABASES_DEVELOPMENT = dedent(
 DATABASES_PRODUCTION = dedent(
     """
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'fao_case_list',
-            'USER': 'fao_case_list',
-            'PASSWORD': '',
-            'HOST': '',
-            'PORT': '',
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": "fao_case_list",
+            "USER": "fao_case_list",
+            "PASSWORD": "",
+            "HOST': "",
+            "PORT': "",
         }
     }
     """
