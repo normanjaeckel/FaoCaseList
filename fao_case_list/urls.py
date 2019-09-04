@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import RedirectView
 
+from . import views
+
 urlpatterns = [
     path("", RedirectView.as_view(pattern_name="admin:index")),
     path("admin/", admin.site.urls),
+    path("update_feed/", views.UpdateFeed.as_view(), name="update_feed"),
 ]
