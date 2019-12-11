@@ -57,6 +57,7 @@ class EntryAdmin(admin.ModelAdmin):
         "link_html",
         "data",
     )
+    list_filter = ("feed__bgh",)
 
 
 admin.site.register(models.Field, FieldAdmin)

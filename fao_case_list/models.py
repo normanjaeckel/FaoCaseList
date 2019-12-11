@@ -112,6 +112,10 @@ class Feed(models.Model):
         verbose_name=ugettext_lazy("Aktualisierung"), auto_now=True
     )
 
+    bgh = models.BooleanField(
+        verbose_name=ugettext_lazy("Besonderes BGH Feed"), default=False,
+    )
+
     class Meta:
         verbose_name = ugettext_lazy("Feed")
         verbose_name_plural = ugettext_lazy("Feeds")
