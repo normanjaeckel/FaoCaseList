@@ -193,3 +193,10 @@ class Entry(models.Model):
         """
         summary = self.data.get("summary", "")
         return summary.replace(FILTER_TEXT, "")
+
+    @property
+    def has_leitsatz(self):
+        """
+        Special property for the BGH feed.
+        """
+        return self.feed.bgh and bool(self.leitsatzentscheidung)
