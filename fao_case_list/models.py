@@ -114,7 +114,7 @@ class Feed(models.Model):
 
     bgh = models.BooleanField(
         verbose_name=ugettext_lazy("Besonderes BGH Feed"), default=False,
-    )
+    )  # This is a useless field, sorry.
 
     class Meta:
         verbose_name = ugettext_lazy("Feed")
@@ -193,10 +193,3 @@ class Entry(models.Model):
         """
         summary = self.data.get("summary", "")
         return summary.replace(FILTER_TEXT, "")
-
-    @property
-    def has_leitsatz(self):
-        """
-        Special property for the BGH feed.
-        """
-        return self.feed.bgh and bool(self.leitsatzentscheidung)

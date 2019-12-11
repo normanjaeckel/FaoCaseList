@@ -57,7 +57,6 @@ class EntryAdmin(admin.ModelAdmin):
         "link_html",
         "data",
     )
-    list_filter = ("has_leitsatz",)
 
 
 admin.site.register(models.Field, FieldAdmin)
