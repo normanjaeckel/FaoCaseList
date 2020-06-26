@@ -23,4 +23,5 @@ urlpatterns = [
     path("", RedirectView.as_view(pattern_name="admin:index")),
     path("admin/", admin.site.urls),
     path("update_feed/", views.UpdateFeed.as_view(), name="update_feed"),
+    path("download_fao/", views.download_fao, name="download_fao"),
 ]
