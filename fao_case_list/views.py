@@ -35,7 +35,7 @@ def download_fao(request, *args, **kwargs):
     """
     CSV download of all cases.
     """
-    if request.user.is_anonymous or not request.user.is_superadmin:
+    if not request.user.is_superuser:
         raise PermissionDenied
     response = HttpResponse(content_type="text/csv")
     response["Content-Disposition"] = "attachment;filename=fao_cases_export.csv"
