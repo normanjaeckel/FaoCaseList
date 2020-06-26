@@ -15,6 +15,10 @@ FILTER_TEXT = (
 class Field(models.Model):
     name = models.CharField(verbose_name=ugettext_lazy("Name"), max_length=255)
 
+    short_name = models.CharField(
+        verbose_name=ugettext_lazy("Kurzbezeichnung"), max_length=255
+    )
+
     section = models.CharField(verbose_name=ugettext_lazy("Norm"), max_length=255)
 
     weight = models.IntegerField(verbose_name=ugettext_lazy("Gewichtung"), default=0)

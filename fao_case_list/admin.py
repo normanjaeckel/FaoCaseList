@@ -14,7 +14,20 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class CaseAdmin(admin.ModelAdmin):
-    list_display = ("caption", "field", "category", "begin", "end")
+    list_display = (
+        "caption",
+        "case_number",
+        "field_in_short",
+        "category",
+        "begin",
+        "end",
+        "state",
+    )
+
+    def field_in_short(self, obj):
+        return obj.field.short_name
+
+    field_in_short.short_description = "Bereich"
 
 
 class FeedAdmin(admin.ModelAdmin):
